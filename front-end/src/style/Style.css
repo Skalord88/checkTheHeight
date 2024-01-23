@@ -1,0 +1,55 @@
+.fluo-title {
+    padding: 20px;
+    display: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.fluo-button {
+    background: lightskyblue;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: flex;
+    font-size: 15px;
+}
+
+.container {
+  background-color:cadetblue;
+  display: flex;
+}
+
+.column {
+  display: flex;
+}
+
+.nav-container {
+  background-color:whitesmoke;
+}
+
+.fluo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .fluo-component {
+    background: lightskyblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .fluo-component:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  
