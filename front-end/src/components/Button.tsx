@@ -12,7 +12,7 @@ export const AddPersonaToCheck: React.FC<InputPersonaCheck> = ({
   };
 
   return (
-    <button className="fluo-button" value={id} onClick={addPersona}>
+    <button className="buttonHigh" value={id} onClick={addPersona}>
       select
     </button>
   );
@@ -20,7 +20,7 @@ export const AddPersonaToCheck: React.FC<InputPersonaCheck> = ({
 
 export const ToIndex: React.FC = () => {
   return (
-    <button>
+    <button className="buttonHigh">
       <Link to={"/"}>to Index</Link>
     </button>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { InputPersona } from "../components/Components.tsx";
+import { InputPersona, LogoHigh, MenuHigh } from "../components/Components.tsx";
 import axios from "axios";
 import { personaEmpty } from "../components/Type.ts";
 import { ToIndex } from "../components/Button.tsx";
@@ -25,20 +25,28 @@ export function Create() {
   return (
     <>
       <div className="container">
-        <div className="fluo-container">
-          <div className="fluo-title">
-            Persona: {persona.name} High: {persona.high}{" "}
-          </div>
-          <div className="fluo-component">
-            <InputPersona
-              initialName={persona.name}
-              initialHigh={persona.high}
-              onChange={handleChange}
-            />
-          </div>
-          <button className="fluo-button" onClick={handleNew}>
-            addPerson
-          </button>
+        <div className="logo">
+          <LogoHigh />
+        </div>
+        <div className="menu">
+          <MenuHigh />
+        </div>
+
+        <div className={"content"}>
+          <h1>
+            Persona: {persona.name} High: {persona.high}
+          </h1>
+        </div>
+        <div className={"content"}>
+          <InputPersona
+            initialName={persona.name}
+            initialHigh={persona.high}
+            onChange={handleChange}
+          />
+        
+        <button onClick={handleNew}>addPerson</button>
+        </div>
+        <div className={"footer"}>
           <ToIndex />
         </div>
       </div>

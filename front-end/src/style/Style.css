@@ -1,55 +1,115 @@
-.fluo-title {
-    padding: 20px;
-    display: center;
-    align-items: center;
-    font-size: 40px;
-}
+body {
 
-.fluo-button {
-    background: lightskyblue;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: black;
-    text-align: flex;
-    font-size: 15px;
+  background-color: gray;
+  font-family: 'Comfortaa', sans-serif;
+
 }
 
 .container {
+
+  width: 1000px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.logo {
+
+  color: white;
+  margin-top: 20px;
+  font-size: 70px;
+
+}
+
+.menu {
+
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: white;
+  padding: 8px;
+
+}
+
+.option{
+  
+  float: left;
+  min-width: 50px;
+  height: 20px;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 2px solid;
+  opacity: 0.8;
+
+}
+
+.option:hover{
+
+  background-color: gray;
+  cursor: pointer;
+
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.topbar {
+
+
+}
+
+.sidebar {
+
+
+}
+
+.content {
+
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding: 4px;
+
+}
+
+.footer {
+
+  background-color: cadetblue;
+  margin-top: 15px;
+  color: white;
+  padding: 25px;
+
+}
+
+.buttonHigh {
+
   background-color:cadetblue;
   display: flex;
-}
+  padding: 10px 15px;
+  border-radius: 8px;
 
-.column {
-  display: flex;
 }
-
-.nav-container {
-  background-color:whitesmoke;
-}
-
-.fluo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .fluo-component {
-    background: lightskyblue;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    color: black;
-    text-align: center;
-    font-size: 18px;
-  }
-  
-  .fluo-component:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  

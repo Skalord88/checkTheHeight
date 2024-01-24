@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
 import { PersonaProns, ListaPersone } from "../components/Type";
-import { ListOfPersone } from "../components/Components.tsx";
+import { ListOfPersone, LogoHigh, MenuHigh } from "../components/Components.tsx";
 import { ToIndex } from "../components/Button.tsx";
 
 export function List() {
@@ -28,7 +28,11 @@ export function List() {
   }, [personaList]);
 
   return (
+    <>
     <div className="container">
+      <LogoHigh />
+      <MenuHigh />
+    <div>
       {personeList ? (
         <>
           <ListOfPersone person={personeList.person} />
@@ -42,5 +46,7 @@ export function List() {
         </>
       )}
     </div>
+    </div>
+  </>
   );
 }
