@@ -3,11 +3,10 @@ import { ListaPersone, PersonaProns } from "../components/Type.tsx";
 import axios from "axios";
 import React from "react";
 import {
+  FooterHigh,
   ListOfPersone,
-  LogoHigh,
-  MenuHigh,
+  TopHigh,
 } from "../components/Components.tsx";
-import { ToIndex } from "../components/Button.tsx";
 
 export function Sort() {
   const [personaList, setPersonaList] = useState<PersonaProns[]>([]);
@@ -33,21 +32,19 @@ export function Sort() {
 
   return (
     <>
-      <div>
-        <div className="container">
-          <LogoHigh />
-          <MenuHigh />
-          {personeList ? (
-            <>
+      <div className="container">
+        <TopHigh />
+
+        {personeList ? (
+          <>
+            <div content="content">
               <ListOfPersone person={personeList.person} />
-              <div>
-                <ToIndex />
-              </div>
-            </>
-          ) : (
-            <>...loading persone...</>
-          )}
-        </div>
+            </div>
+          </>
+        ) : (
+          <>...loading persone...</>
+        )}
+        <FooterHigh />
       </div>
     </>
   );

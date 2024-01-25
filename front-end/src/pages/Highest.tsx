@@ -4,9 +4,10 @@ import { PersonaProns } from "../components/Type.tsx";
 import React from "react";
 import {
   CheckListOfPersone,
+  FooterHigh,
   ListOfPersone,
+  TopHigh,
 } from "../components/Components.tsx";
-import { ToIndex } from "../components/Button.tsx";
 
 export function Highest() {
   const [personaList, setPersonaList] = useState<PersonaProns[]>([]);
@@ -18,7 +19,6 @@ export function Highest() {
         const resURL = await axios.get("http://localhost:8080/persone");
 
         setPersonaList(resURL.data);
-
       } catch (error) {
         console.log(error);
       }
@@ -27,48 +27,47 @@ export function Highest() {
   }, []);
 
   const addPersonToList = (newId: any) => {
+    const id: number = parseInt(newId);
 
-    const id: number = parseInt(newId)
+    console.log(typeof id);
 
-    console.log(typeof id)
-
-    const selectedPersona  = personaList.find(persona => persona.id === id);
+    const selectedPersona = personaList.find((persona) => persona.id === id);
     if (selectedPersona) {
-      setPersonaNewList(list => [...list, selectedPersona]);
+      setPersonaNewList((list) => [...list, selectedPersona]);
     }
 
-    console.log(personaNewList)
-
-  }
+    console.log(personaNewList);
+  };
 
   const handleCheck = () => {
     const sortList = personaNewList.sort((p1, p2) => p2.high - p1.high);
-    console.log(sortList)
+    console.log(sortList);
     setPersonaNewList(sortList);
-  }
+  };
 
   return (
     <>
       <div className="container">
-      <div className="fluo-container">
-        <CheckListOfPersone
-          person={personaList}
-          onChange={addPersonToList}
-        />
-      </div>
-      <div>
-            <ToIndex />
-          </div>
-      <div>
-        {personaNewList.length === 0 ? (
-          <>select person to check</>
-        ) : (
-        <div className="fluo-container">
-          <ListOfPersone person={personaNewList} />
-          <button onClick={handleCheck}>order</button>
+        <TopHigh />
+        <div>
+          <CheckListOfPersone person={personaList} onChange={addPersonToList} />
         </div>
-        )}
-      </div>
+
+        <div>
+          {personaNewList.length === 0 ? (
+            <>select person to check</>
+          ) : (
+            <>
+              <div>
+                <ListOfPersone person={personaNewList} />
+                <button className="buttonHigh" onClick={handleCheck}>
+                  order
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+        <FooterHigh />
       </div>
     </>
   );

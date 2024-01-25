@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { InputPersona, LogoHigh, MenuHigh } from "../components/Components.tsx";
+import {
+  FooterHigh,
+  InputPersona,
+  TopHigh,
+} from "../components/Components.tsx";
 import axios from "axios";
 import { personaEmpty } from "../components/Type.ts";
-import { ToIndex } from "../components/Button.tsx";
 import "../style/Style.css";
 
 export function Create() {
@@ -25,17 +28,8 @@ export function Create() {
   return (
     <>
       <div className="container">
-        <div className="logo">
-          <LogoHigh />
-        </div>
-        <div className="menu">
-          <MenuHigh />
-        </div>
-
+        <TopHigh />
         <div className={"content"}>
-          <h1>
-            Persona: {persona.name} High: {persona.high}
-          </h1>
         </div>
         <div className={"content"}>
           <InputPersona
@@ -43,12 +37,17 @@ export function Create() {
             initialHigh={persona.high}
             onChange={handleChange}
           />
-        
-        <button onClick={handleNew}>addPerson</button>
+          
         </div>
-        <div className={"footer"}>
-          <ToIndex />
-        </div>
+        <div className="content">
+        <h1>
+            Persona: {persona.name} High: {persona.high}{" "}
+            <button className="buttonHigh" onClick={handleNew}>
+              Add
+            </button>
+          </h1>
+          </div>
+        <FooterHigh />
       </div>
     </>
   );

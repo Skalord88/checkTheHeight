@@ -1,41 +1,32 @@
 body {
-
   background-color: gray;
-  font-family: 'Comfortaa', sans-serif;
-
+  font-family: "Comfortaa", sans-serif;
 }
 
 .container {
-
-  width: 1000px;
+  width: flex;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .logo {
-
   color: white;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 70px;
-
 }
 
 .menu {
-
   background-color: cadetblue;
   display: flex;
   flex-direction: row;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
-  padding: 8px;
-
+  padding: 10px;
 }
 
-.option{
-  
+.option {
   float: left;
   min-width: 50px;
   height: 20px;
@@ -43,14 +34,11 @@ body {
   padding: 10px;
   border-right: 2px solid;
   opacity: 0.8;
-
 }
 
-.option:hover{
-
+.option:hover {
   background-color: gray;
   cursor: pointer;
-
 }
 
 /* unvisited link */
@@ -77,39 +65,31 @@ a:active {
   text-decoration: none;
 }
 
-.topbar {
-
-
-}
-
-.sidebar {
-
-
-}
-
 .content {
-
   display: flex;
   flex-direction: row;
   color: white;
   padding: 4px;
-
 }
 
 .footer {
-
   background-color: cadetblue;
-  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
-  padding: 25px;
-
+  padding: 10px;
 }
 
 .buttonHigh {
-
-  background-color:cadetblue;
-  display: flex;
+  background-color: cadetblue;
   padding: 10px 15px;
   border-radius: 8px;
+}
 
+.inputHigh {
+  text-align: left;
+  display: flex;
+  padding: 10px 15px;
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { InputPersonaCheck } from "./Type";
 import "../style/Style.css";
-import { Link } from "react-router-dom";
 
 export const AddPersonaToCheck: React.FC<InputPersonaCheck> = ({
   id,
@@ -18,10 +17,4 @@ export const AddPersonaToCheck: React.FC<InputPersonaCheck> = ({
   );
 };
 
-export const ToIndex: React.FC = () => {
-  return (
-    <button className="buttonHigh">
-      <Link to={"/"}>to Index</Link>
-    </button>
-  );
-};
+

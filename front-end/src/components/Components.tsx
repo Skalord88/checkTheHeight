@@ -95,12 +95,51 @@ export const InputPersona: React.FC<InputPersonaProps> = ({
   return (
     <>
       <div>
-        <input type="text" value={name} onChange={handleChangeName} />
+        add new persona name
+        <input
+          className="inputHigh"
+          type="text"
+          value={name}
+          onChange={handleChangeName}
+        />
       </div>
       <div>
-        <input type="number" value={high} onChange={handleChangeHigh} />
+        add new persona height
+        <input
+          className="inputHigh"
+          type="number"
+          value={high}
+          onChange={handleChangeHigh}
+        />
       </div>
-      <button onClick={handleSave}>Confirm</button>
+      <button className="buttonHigh" onClick={handleSave}>
+        Confirm
+      </button>
     </>
+  );
+};
+
+export const ToIndex: React.FC = () => {
+  return (
+    <div className="option">
+      <Link to={"/"}>to Index</Link>
+    </div>
+  );
+};
+
+export const TopHigh: React.FC = () => {
+  return (
+    <>
+      <LogoHigh />
+      <MenuHigh />
+    </>
+  );
+};
+
+export const FooterHigh: React.FC = () => {
+  return (
+    <div className="footer">
+      <ToIndex />
+    </div>
   );
 };
