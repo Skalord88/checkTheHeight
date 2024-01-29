@@ -29,18 +29,14 @@ export function Highest() {
   const addPersonToList = (newId: any) => {
     const id: number = parseInt(newId);
 
-    console.log(typeof id);
-
     const selectedPersona = personaList.find((persona) => persona.id === id);
     if (selectedPersona) {
       setPersonaNewList((list) => [...list, selectedPersona]);
     }
-
-    console.log(personaNewList);
   };
 
   const handleCheck = () => {
-    const sortList = personaNewList.sort((p1, p2) => p2.high - p1.high);
+    const sortList = Array.from(personaNewList).sort((p1, p2) => p2.high - p1.high);
     console.log(sortList);
     setPersonaNewList(sortList);
   };
