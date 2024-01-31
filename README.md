@@ -33,8 +33,9 @@ mvn spring-boot:run
 
 3 - liquid base will create a test database.
 
-4 - Open React folder
+4 - Open React folder and start front end project
 cd front-end
+npm start
 
 ## Technologies Used
 
