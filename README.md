@@ -15,8 +15,6 @@ This project is a program with which it is possible to insert users and compare 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
